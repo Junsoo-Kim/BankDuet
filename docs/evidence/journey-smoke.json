@@ -1,0 +1,602 @@
+{
+  "cases": [
+    {
+      "case": "V01 initial",
+      "actual": {
+        "capital": 400000000,
+        "monthly": 5000000,
+        "projected": 1000000000,
+        "gap": 0,
+        "needed_months": 120,
+        "extra_monthly": 0,
+        "remaining_cycles": 120,
+        "target_date": "2036-11-18",
+        "achieve_date": "2036-11-18",
+        "milestones": [
+          {
+            "month": 0,
+            "amount": 400000000,
+            "progress_pct": 40.0
+          },
+          {
+            "month": 12,
+            "amount": 460000000,
+            "progress_pct": 46.0
+          },
+          {
+            "month": 24,
+            "amount": 520000000,
+            "progress_pct": 52.0
+          },
+          {
+            "month": 36,
+            "amount": 580000000,
+            "progress_pct": 58.0
+          },
+          {
+            "month": 48,
+            "amount": 640000000,
+            "progress_pct": 64.0
+          },
+          {
+            "month": 60,
+            "amount": 700000000,
+            "progress_pct": 70.0
+          },
+          {
+            "month": 72,
+            "amount": 760000000,
+            "progress_pct": 76.0
+          },
+          {
+            "month": 84,
+            "amount": 820000000,
+            "progress_pct": 82.0
+          },
+          {
+            "month": 96,
+            "amount": 880000000,
+            "progress_pct": 88.0
+          },
+          {
+            "month": 108,
+            "amount": 940000000,
+            "progress_pct": 94.0
+          },
+          {
+            "month": 120,
+            "amount": 1000000000,
+            "progress_pct": 100.0
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case": "mock savings baseline",
+      "actual": [
+        {
+          "date": "2026-10-25",
+          "type": "저축 이체",
+          "amount": 2500000
+        },
+        {
+          "date": "2026-09-25",
+          "type": "저축 이체",
+          "amount": 2600000
+        },
+        {
+          "date": "2026-08-25",
+          "type": "저축 이체",
+          "amount": 2400000
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case": "monthly trajectory",
+      "actual": {
+        "month": 120,
+        "amount": 1000000000,
+        "progress_pct": 100.0
+      },
+      "passed": true
+    },
+    {
+      "case": "V07 single approval",
+      "actual": {
+        "kb": "approve"
+      },
+      "passed": true
+    },
+    {
+      "case": "V06 expense and privacy",
+      "actual": {
+        "capital": 390000000,
+        "monthly": 5000000,
+        "projected": 990000000,
+        "gap": 10000000,
+        "needed_months": 122,
+        "extra_monthly": 83334,
+        "remaining_cycles": 120,
+        "target_date": "2036-11-18",
+        "achieve_date": "2037-01-18",
+        "milestones": [
+          {
+            "month": 0,
+            "amount": 390000000,
+            "progress_pct": 39.0
+          },
+          {
+            "month": 12,
+            "amount": 450000000,
+            "progress_pct": 45.0
+          },
+          {
+            "month": 24,
+            "amount": 510000000,
+            "progress_pct": 51.0
+          },
+          {
+            "month": 36,
+            "amount": 570000000,
+            "progress_pct": 57.0
+          },
+          {
+            "month": 48,
+            "amount": 630000000,
+            "progress_pct": 63.0
+          },
+          {
+            "month": 60,
+            "amount": 690000000,
+            "progress_pct": 69.0
+          },
+          {
+            "month": 72,
+            "amount": 750000000,
+            "progress_pct": 75.0
+          },
+          {
+            "month": 84,
+            "amount": 810000000,
+            "progress_pct": 81.0
+          },
+          {
+            "month": 96,
+            "amount": 870000000,
+            "progress_pct": 87.0
+          },
+          {
+            "month": 108,
+            "amount": 930000000,
+            "progress_pct": 93.0
+          },
+          {
+            "month": 120,
+            "amount": 990000000,
+            "progress_pct": 99.0
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case": "V06b reconciled",
+      "actual": 195000000,
+      "passed": true
+    },
+    {
+      "case": "V02 replan",
+      "actual": {
+        "answer": "현재 부족액은 10,000,000원입니다. 월 한도를 유지하면 122회차(2037-01-18)에 도달합니다. 기간 연장안을 양쪽 은행에서 검토하세요.\n가상 계좌·공유 기여액 기준의 원금 추산입니다. 금융 전문가의 상담을 대신할 수 없습니다.",
+        "ms": 140
+      },
+      "passed": true
+    },
+    {
+      "case": "V03 limit",
+      "actual": {
+        "answer": "두 대안을 검토했습니다. 기존 날짜를 지키려면 월 합산 83,334원이 더 필요합니다. 증액 동의가 없어 자동 변경을 보류합니다. 기간 연장을 허용할까요?\n가상 계좌·공유 기여액 기준의 원금 추산입니다. 금융 전문가의 상담을 대신할 수 없습니다.",
+        "ms": 125
+      },
+      "passed": true
+    },
+    {
+      "case": "V05 no tools",
+      "actual": {
+        "answer": "공동 목표를 만들고 상대 은행에서 초대를 수락하세요. 예상 달성일을 비교한 뒤 양쪽에서 같은 버전을 승인할 수 있어요.",
+        "ms": 156
+      },
+      "passed": true
+    },
+    {
+      "case": "V04 branch response",
+      "actual": {
+        "answer": "지점 검색을 완료하지 못했습니다. 카카오 REST 키 설정이 필요합니다.",
+        "ms": 141
+      },
+      "passed": true
+    },
+    {
+      "case": "account detail",
+      "actual": "모킹 계좌의 출금가능액은 205,000,000원입니다. 비상금과 예정 지출은 목표별로 반영합니다.",
+      "passed": true
+    },
+    {
+      "case": "V07 new confirmed version",
+      "actual": 4,
+      "passed": true
+    },
+    {
+      "case": "V06 one-time consent",
+      "actual": 5,
+      "passed": true
+    },
+    {
+      "case": "V08 conflicting appointment",
+      "actual": 1,
+      "passed": true
+    },
+    {
+      "case": "V08 session isolation",
+      "actual": [],
+      "passed": true
+    },
+    {
+      "case": "normal trace",
+      "actual": {
+        "runs": [
+          {
+            "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+            "status": "정상",
+            "warnings": []
+          },
+          {
+            "run_id": "f1f8c76a-b31e-40ed-8094-b7bf946ee061",
+            "status": "정상",
+            "warnings": []
+          },
+          {
+            "run_id": "8fe8ac51-8e22-4f66-a1c3-61536e054529",
+            "status": "정상",
+            "warnings": []
+          },
+          {
+            "run_id": "598e7ef9-5e02-4f8f-b1a6-f4a8bc0c5eed",
+            "status": "정상",
+            "warnings": []
+          },
+          {
+            "run_id": "bcabb79b-efb1-4909-a5e7-601718a4e046",
+            "status": "정상",
+            "warnings": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case": "V08 log deletion",
+      "actual": [],
+      "passed": true
+    },
+    {
+      "case": "deposit replay and missed correction",
+      "actual": {
+        "1": 2500000
+      },
+      "passed": true
+    },
+    {
+      "case": "prior approvals retained",
+      "actual": [
+        120,
+        122
+      ],
+      "passed": true
+    }
+  ],
+  "timings": [
+    {
+      "prompt": "월 한도 유지, 기간 연장 허용하면 언제 달성해?",
+      "accepted_ms": 0,
+      "complete_ms": 140,
+      "tool_ms": 0,
+      "llm_calls": 0
+    },
+    {
+      "prompt": "같은 조건에서 기간 고정",
+      "accepted_ms": 0,
+      "complete_ms": 125,
+      "tool_ms": 0,
+      "llm_calls": 0
+    },
+    {
+      "prompt": "사용법",
+      "accepted_ms": 16,
+      "complete_ms": 156,
+      "tool_ms": 0,
+      "llm_calls": 0
+    },
+    {
+      "prompt": "영통에서 상담할 지점",
+      "accepted_ms": 0,
+      "complete_ms": 141,
+      "tool_ms": 0,
+      "llm_calls": 0
+    },
+    {
+      "prompt": "내 계좌 잔액",
+      "accepted_ms": 0,
+      "complete_ms": 141,
+      "tool_ms": 0,
+      "llm_calls": 0
+    }
+  ],
+  "total_ms": 7844,
+  "representative_replan": [
+    {
+      "seq": 89,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.enter",
+      "payload": {
+        "stage": "analyze"
+      },
+      "created_at": "2026-11-18T03:56:36.007241Z"
+    },
+    {
+      "seq": 90,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "decision",
+      "payload": {
+        "mode": "local_rules",
+        "intent": "plan",
+        "reason": "기간·납입 조건 검토"
+      },
+      "created_at": "2026-11-18T03:56:36.011208Z"
+    },
+    {
+      "seq": 91,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.exit",
+      "payload": {
+        "ms": 3,
+        "stage": "analyze"
+      },
+      "created_at": "2026-11-18T03:56:36.013753Z"
+    },
+    {
+      "seq": 92,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.enter",
+      "payload": {
+        "stage": "choose"
+      },
+      "created_at": "2026-11-18T03:56:36.016638Z"
+    },
+    {
+      "seq": 93,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "plan",
+      "payload": {
+        "tools": [
+          "list_accounts",
+          "read_balance"
+        ]
+      },
+      "created_at": "2026-11-18T03:56:36.019394Z"
+    },
+    {
+      "seq": 94,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.exit",
+      "payload": {
+        "ms": 3,
+        "stage": "choose"
+      },
+      "created_at": "2026-11-18T03:56:36.022040Z"
+    },
+    {
+      "seq": 95,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.enter",
+      "payload": {
+        "stage": "execute"
+      },
+      "created_at": "2026-11-18T03:56:36.024811Z"
+    },
+    {
+      "seq": 96,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "tool.request",
+      "payload": {
+        "args": {},
+        "name": "list_accounts"
+      },
+      "created_at": "2026-11-18T03:56:36.027254Z"
+    },
+    {
+      "seq": 97,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "tool.result",
+      "payload": {
+        "ms": 0,
+        "name": "list_accounts",
+        "result": {
+          "ok": true,
+          "data": [
+            {
+              "account_id": "kb-demo-01",
+              "product_name": "목표 참여 입출금계좌"
+            }
+          ],
+          "source": "mock"
+        }
+      },
+      "created_at": "2026-11-18T03:56:36.029802Z"
+    },
+    {
+      "seq": 98,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "tool.request",
+      "payload": {
+        "args": {
+          "account_id": "kb-demo-01"
+        },
+        "name": "read_balance"
+      },
+      "created_at": "2026-11-18T03:56:36.032528Z"
+    },
+    {
+      "seq": 99,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "tool.result",
+      "payload": {
+        "ms": 0,
+        "name": "read_balance",
+        "result": {
+          "ok": true,
+          "data": {
+            "as_of": "2026-11-18T12:56:36.035088+09:00",
+            "available": 205000000
+          },
+          "source": "mock"
+        }
+      },
+      "created_at": "2026-11-18T03:56:36.035502Z"
+    },
+    {
+      "seq": 100,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.exit",
+      "payload": {
+        "ms": 12,
+        "stage": "execute"
+      },
+      "created_at": "2026-11-18T03:56:36.039324Z"
+    },
+    {
+      "seq": 101,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.enter",
+      "payload": {
+        "stage": "judge"
+      },
+      "created_at": "2026-11-18T03:56:36.042442Z"
+    },
+    {
+      "seq": 102,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.exit",
+      "payload": {
+        "ms": 0,
+        "stage": "judge"
+      },
+      "created_at": "2026-11-18T03:56:36.045549Z"
+    },
+    {
+      "seq": 103,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.enter",
+      "payload": {
+        "stage": "replan"
+      },
+      "created_at": "2026-11-18T03:56:36.048785Z"
+    },
+    {
+      "seq": 104,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "replan",
+      "payload": {
+        "reused": [
+          "list_accounts",
+          "read_balance"
+        ],
+        "attempt": 1,
+        "alternative": "월 한도 유지 · 기간 연장"
+      },
+      "created_at": "2026-11-18T03:56:36.051336Z"
+    },
+    {
+      "seq": 105,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.exit",
+      "payload": {
+        "ms": 3,
+        "stage": "replan"
+      },
+      "created_at": "2026-11-18T03:56:36.054166Z"
+    },
+    {
+      "seq": 106,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.enter",
+      "payload": {
+        "stage": "judge"
+      },
+      "created_at": "2026-11-18T03:56:36.057021Z"
+    },
+    {
+      "seq": 107,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.exit",
+      "payload": {
+        "ms": 0,
+        "stage": "judge"
+      },
+      "created_at": "2026-11-18T03:56:36.059642Z"
+    },
+    {
+      "seq": 108,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.enter",
+      "payload": {
+        "stage": "respond"
+      },
+      "created_at": "2026-11-18T03:56:36.062661Z"
+    },
+    {
+      "seq": 109,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "stage.exit",
+      "payload": {
+        "ms": 0,
+        "stage": "respond"
+      },
+      "created_at": "2026-11-18T03:56:36.065774Z"
+    },
+    {
+      "seq": 110,
+      "session_id": "eec1b68d-dbbb-46b7-9c7e-be795f33d0e7",
+      "run_id": "ff9df542-64ce-42de-a8aa-ed61ee244e31",
+      "kind": "run.finish",
+      "payload": {
+        "ms": 63,
+        "state": "complete"
+      },
+      "created_at": "2026-11-18T03:56:36.068472Z"
+    }
+  ]
+}

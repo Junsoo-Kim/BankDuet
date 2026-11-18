@@ -1,0 +1,74 @@
+name: bankduet
+x-db: &db
+  image: postgres:16-bookworm
+  healthcheck:
+    test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+    interval: 3s
+    timeout: 3s
+    retries: 20
+x-api: &api
+  build: ./backend
+  env_file:
+    - path: .agent.env
+      required: false
+  healthcheck:
+    test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health',timeout=3)"]
+    interval: 5s
+    timeout: 4s
+    retries: 20
+services:
+  web:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:${WEB_PORT:-18473}:80"
+    networks: [edge]
+    depends_on:
+      kb-api: {condition: service_healthy}
+      b-api: {condition: service_healthy}
+  kb-api:
+    <<: *api
+    environment:
+      BANK_ID: kb
+      BANK_PEER_SECRET: ${BANK_PEER_SECRET:?set BANK_PEER_SECRET in .env}
+      DB_HOST: kb-db
+      DB_NAME: kb
+      DB_USER: kb_app
+      DB_PASSWORD: ${KB_DB_PASSWORD:?set KB_DB_PASSWORD in .env}
+    depends_on:
+      kb-db: {condition: service_healthy}
+    networks: [edge, kb-private]
+  b-api:
+    <<: *api
+    environment:
+      BANK_ID: b
+      BANK_PEER_SECRET: ${BANK_PEER_SECRET:?set BANK_PEER_SECRET in .env}
+      DB_HOST: b-db
+      DB_NAME: b
+      DB_USER: b_app
+      DB_PASSWORD: ${B_DB_PASSWORD:?set B_DB_PASSWORD in .env}
+    depends_on:
+      b-db: {condition: service_healthy}
+    networks: [edge, b-private]
+  kb-db:
+    <<: *db
+    environment:
+      POSTGRES_DB: kb
+      POSTGRES_USER: kb_app
+      POSTGRES_PASSWORD: ${KB_DB_PASSWORD:?set KB_DB_PASSWORD in .env}
+    volumes: [kb-data:/var/lib/postgresql/data]
+    networks: [kb-private]
+  b-db:
+    <<: *db
+    environment:
+      POSTGRES_DB: b
+      POSTGRES_USER: b_app
+      POSTGRES_PASSWORD: ${B_DB_PASSWORD:?set B_DB_PASSWORD in .env}
+    volumes: [b-data:/var/lib/postgresql/data]
+    networks: [b-private]
+networks:
+  edge: {}
+  kb-private: {internal: true}
+  b-private: {internal: true}
+volumes:
+  kb-data: {}
+  b-data: {}

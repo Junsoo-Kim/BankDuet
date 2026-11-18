@@ -1,0 +1,11 @@
+services:
+  kb-api:
+    environment:
+      JOURNEY_TRANSPORT: ${BENCH_TRANSPORT:-a2a}
+  b-api:
+    environment:
+      JOURNEY_TRANSPORT: ${BENCH_TRANSPORT:-a2a}
+      REPLACE_ADAPTER: ${BENCH_REPLACE:-0}
+    volumes:
+      - ./tests/alternative.py:/srv/alternative.py:ro
+    command: ["sh", "-c", "alembic upgrade head && python -m app.seed && uvicorn alternative:app --host 0.0.0.0 --port 8000"]

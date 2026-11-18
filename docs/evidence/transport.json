@@ -1,0 +1,32 @@
+[
+  {
+    "mode": "rest",
+    "replacement": false,
+    "latency_ms": [
+      1547,
+      1547,
+      2078
+    ],
+    "recovery_ms": 9453
+  },
+  {
+    "mode": "a2a",
+    "replacement": false,
+    "latency_ms": [
+      1657,
+      2093,
+      1985
+    ],
+    "recovery_ms": 9468
+  },
+  {
+    "mode": "a2a",
+    "replacement": true,
+    "latency_ms": [
+      1562,
+      2109,
+      2078
+    ],
+    "recovery_ms": 9453
+  }
+]

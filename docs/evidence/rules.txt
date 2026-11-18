@@ -1,0 +1,27 @@
+test_actual_and_missed_installments (test_rules.Rules.test_actual_and_missed_installments) ... ok
+test_anomaly_diagnosis (test_rules.Rules.test_anomaly_diagnosis) ... ok
+test_expired_snapshot_and_rejection (test_rules.Rules.test_expired_snapshot_and_rejection) ... ok
+test_logger_unavailable (test_rules.Rules.test_logger_unavailable) ... 실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+실행 로그 저장 실패
+ok
+test_malformed_and_failed_account (test_rules.Rules.test_malformed_and_failed_account) ... ok
+test_model_selects_account_tool_for_ambiguous_prompt (test_rules.Rules.test_model_selects_account_tool_for_ambiguous_prompt) ... ok
+test_no_monthly_and_goal_already_met (test_rules.Rules.test_no_monthly_and_goal_already_met) ... ok
+test_partial_balance_and_duplicate_candidate (test_rules.Rules.test_partial_balance_and_duplicate_candidate) ... ok
+test_partial_success_and_followup (test_rules.Rules.test_partial_success_and_followup) ... ok
+test_places_provider_contract (test_rules.Rules.test_places_provider_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.024s
+
+OK
